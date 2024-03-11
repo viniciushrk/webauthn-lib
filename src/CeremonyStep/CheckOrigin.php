@@ -37,6 +37,13 @@ final class CheckOrigin implements CeremonyStep
         $rpId = $publicKeyCredentialOptions->rpId ?? $publicKeyCredentialOptions->rp->id ?? $host;
         $facetId = $this->getFacetId($rpId, $publicKeyCredentialOptions->extensions, $authData->extensions);
         $parsedRelyingPartyId = parse_url($C->origin);
+        $origin = $C->origin;
+
+        // Android app origin
+        if (! filter_var($origin, FILTER_VALIDATE_URL) && str_starts_with($origin, 'android:apk-key-hash:')) {
+            return;
+        }
+        
         is_array($parsedRelyingPartyId) || throw AuthenticatorResponseVerificationException::create(
             'Invalid origin'
         );
