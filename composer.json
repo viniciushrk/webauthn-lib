@@ -1,5 +1,5 @@
 {
-    "name": "web-auth/webauthn-lib",
+    "name": "viniciushrk/webauthn-lib",
     "type": "library",
     "license": "MIT",
     "description": "FIDO2/Webauthn Support For PHP",
@@ -8,7 +8,7 @@
         "FIDO2",
         "webauthn"
     ],
-    "homepage": "https://github.com/web-auth",
+    "homepage": "https://github.com/viniciushrk/webauthn-lib",
     "authors": [
         {
             "name": "Florent Morselli",
