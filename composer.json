@@ -32,7 +32,7 @@
         "spomky-labs/cbor-php": "^3.0",
         "symfony/uid": "^6.1|^7.0",
         "web-auth/cose-lib": "^4.2.3",
-        "web-auth/metadata-service": "4.8.3"
+        "web-auth/metadata-service": "4.8.2"
     },
     "autoload": {
         "psr-4": {
